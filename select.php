@@ -26,6 +26,19 @@ if($status==false) {
     $view .= '<td scope="row"><a href="' .$result['book_url']. '">Link</a></td>';
     $view .= '<td scope="row">'.$result['book_comment'].'</td>';
     $view .= '<td scope="row">'.$result['registration_time'].'</td>';
+
+    $view .= '<td scope="row">';
+    $view .= '<a href="details.php?id=' . $result['id'] . '" class="btn btn-primary">';
+    $view .= '更新';
+    $view .= '</a>';
+    $view .= '</td>';
+
+    $view .= '<td scope="row">';
+    $view .= '<a href="delete.php?id=' . $result['id'] . '" class="btn btn-primary">';
+    $view .= '削除';
+    $view .= '</a>';
+    $view .= '</td>';
+
     $view .= "</tr>";
   }
 }
